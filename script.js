@@ -16,22 +16,23 @@ $("#currentDay").html(todaysDate);
 
 
 // function for saving items
-$(window).on("load",function() {
+function classAddition() {
     var timeValue = ($(textArea).attr("data-value"));
     timeValue = parseInt(timeValue);
 
     if (timeValue === currentTime) {
-        $("textArea").addClass(".present");
-    } else if 
-        (timeValue < currentTime) {
-            $("textArea").addClass(".future");
+        $("textArea").addClass("present");
     } else if 
         (timeValue > currentTime) {
-            $("textArea").addClass(".past");
+            $("textArea").addClass("future");
+    } else if 
+        (timeValue < currentTime) {
+            $("textArea").addClass("past");
     }
     console.log(timeValue);
-})
+}
 
+classAddition();
 
 console.log(currentTime);
 });
