@@ -34,7 +34,7 @@ function setCalendar () {
         $activity = localStorage.getItem($timeOfEvent);
 
         if ($activity !== null) {
-            $(this).children("textarea").val($activity)
+            $(this).val($activity)
         }
         console.log($activity);
     });
