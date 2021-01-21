@@ -28,13 +28,25 @@ function classAddition() {
 };
 classAddition();
 
+function setCalendar () {
+    $textArea.each(function() {
+        $id = $(this).attr('data-value');
+        $activity = localStorage.getItem($id);
+
+        if ($activity !== null) {
+            $(this).children(".col-sm-10").val($activity)
+        }
+    });
+}
+
+setCalendar();
 // create afunction to save info to local storage using info
 
 $(".saveBtn").on("click", function () {
     $timeOfEvent = $(this).parent().attr("id");
     $textInfo = $(this).prev().val().trim();
 
-    localStorage.setItem($timeOfEvent, $textInfo);
+    localStorage.setItem($timeOfEvent, JSON.stringify($textInfo));
     // console.log(timeOfEvent, textInfo);
   
     // console.log($(this));
@@ -42,9 +54,8 @@ $(".saveBtn").on("click", function () {
     
     // console.log($timeOfEvent);
 
-  localStorage.getItem($textInfo);
- 
-})
 
+})
+console.log(localStorage);
 
 });
