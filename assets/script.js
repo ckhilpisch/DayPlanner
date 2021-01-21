@@ -2,9 +2,8 @@ $(document).ready(function() {
 var todaysDate = moment().format('LL'); 
 var currentTime = moment().hour();
 var textArea = $("textarea");
-var dataValue = $("data-value");
 
-// console.log(dataValue);
+console.log(currentTime);
 
 // add moment to p id=currentDay
 $("#currentDay").html(todaysDate);
