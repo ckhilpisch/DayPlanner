@@ -1,15 +1,9 @@
 $(document).ready(function() {
 var todaysDate = moment().format('LL'); 
 var currentTime = moment().hour();
-var timeBlock = $(".time-block");
 var textArea = $("textarea");
-
-
-
 // add moment to p id=currentDay
 $("#currentDay").html(todaysDate);
-
-
 // create a fumction to show the date and time using moment
 // use function to determine a class of either past, present, or future
 function classAddition() {
@@ -29,6 +23,16 @@ function classAddition() {
 }
 classAddition();
 
+// create afunction to save info to local storage using info
 
+$("saveBtn").on("click", function () {
+    timeOfEvent = $(this).textArea().attr("data-value");
+    textInfo = $(textArea).input.val();
+
+    localStorage.setItem(timeInfo, textInfo);
+
+    
+})
+console.log(timeOfEvent, textInfo);
 
 });
