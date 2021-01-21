@@ -30,14 +30,15 @@ classAddition();
 // create afunction to save info to local storage using info
 
 $(".saveBtn").on("click", function () {
-    // timeOfEvent = $(this).parent().attr("id");
-    textInfo = $(textArea).val();
+    timeOfEvent = $(this).parent().attr("id");
+    // textInfo = $(this).pre().val();
 
     // localStorage.setItem(timeOfEvent, textInfo);
     // console.log(timeOfEvent, textInfo);
-    // console.log("testing saveBtn onclick");
+  
     console.log($(this));
-    console.log(textInfo);
+    // console.log(textInfo);
+    console.log(timeOfEvent);
 
 })
 
