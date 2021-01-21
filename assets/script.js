@@ -30,12 +30,13 @@ classAddition();
 
 function setCalendar () {
     $textArea.each(function() {
-        $id = $(this).attr('data-value');
-        $activity = localStorage.getItem($id);
+        $timeOfEvent = $(this).parent().attr("id");
+        $activity = localStorage.getItem($timeOfEvent);
 
         if ($activity !== null) {
-            $(this).children(".col-sm-10").val($activity)
+            $(this).children("textarea").val($activity)
         }
+        console.log($activity);
     });
 }
 
