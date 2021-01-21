@@ -31,13 +31,14 @@ classAddition();
 
 $(".saveBtn").on("click", function () {
     timeOfEvent = $(this).parent().attr("id");
-    // textInfo = $(this).pre().val();
+    // textInfo = $(this).prev().val().trim();
 
     // localStorage.setItem(timeOfEvent, textInfo);
     // console.log(timeOfEvent, textInfo);
   
     console.log($(this));
-    // console.log(textInfo);
+    console.log($(this).prev().val().trim());
+    
     console.log(timeOfEvent);
 
 })
