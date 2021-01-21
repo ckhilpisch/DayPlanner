@@ -29,7 +29,7 @@ $("saveBtn").on("click", function () {
     timeOfEvent = $(this).textArea().attr("data-value");
     textInfo = $(textArea).input.val();
 
-    localStorage.setItem(timeInfo, textInfo);
+    localStorage.setItem(timeofEvent, textInfo);
 
     
 })
