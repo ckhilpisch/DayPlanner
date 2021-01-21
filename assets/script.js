@@ -2,9 +2,6 @@ $(document).ready(function() {
 var todaysDate = moment().format('LL'); 
 var currentTime = moment().hour();
 var $textArea = $("textarea");
-
-console.log(currentTime);
-
 // add moment to p id=currentDay
 $("#currentDay").html(todaysDate);
 // create a fumction to show the date and time using moment
@@ -27,6 +24,7 @@ function classAddition() {
     });
 };
 classAddition();
+//create a function that loads information from local storage on to the page
 
 function setCalendar () {
     $textArea.each(function() {
@@ -46,16 +44,7 @@ setCalendar();
 $(".saveBtn").on("click", function () {
     $timeOfEvent = $(this).parent().attr("id");
     $textInfo = $(this).prev().val().trim();
-
-    localStorage.setItem($timeOfEvent, JSON.stringify($textInfo));
-    // console.log(timeOfEvent, textInfo);
-  
-    // console.log($(this));
-    // console.log($(this).prev().val().trim());
-    
-    // console.log($timeOfEvent);
-
-
+    localStorage.setItem($timeOfEvent, $textInfo);
 })
 console.log(localStorage);
 
