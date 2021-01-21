@@ -2,6 +2,10 @@ $(document).ready(function() {
 var todaysDate = moment().format('LL'); 
 var currentTime = moment().hour();
 var textArea = $("textarea");
+var dataValue = $("data-value");
+
+// console.log(dataValue);
+
 // add moment to p id=currentDay
 $("#currentDay").html(todaysDate);
 // create a fumction to show the date and time using moment
@@ -25,14 +29,17 @@ classAddition();
 
 // create afunction to save info to local storage using info
 
-$("saveBtn").on("click", function () {
-    timeOfEvent = $(this).textArea().attr("data-value");
-    textInfo = $(textArea).input.val();
+$(".saveBtn").on("click", function () {
+    // timeOfEvent = $(this).parent().attr("id");
+    textInfo = $(textArea).val();
 
-    localStorage.setItem(timeofEvent, textInfo);
+    // localStorage.setItem(timeOfEvent, textInfo);
+    // console.log(timeOfEvent, textInfo);
+    // console.log("testing saveBtn onclick");
+    console.log($(this));
+    console.log(textInfo);
 
-    
 })
-console.log(timeOfEvent, textInfo);
+
 
 });
