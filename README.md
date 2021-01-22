@@ -15,3 +15,5 @@ Next I added a setCalendar function.   This was to set information from local st
 For my final roadblock, I kept not being able to get information from storage.  It was driving me bonkers.  I reached out to a tutor on the ask BCS.  At the same time I recognized the errant code.  It was this snippet $(this).children("textarea").val($activity).  I didn't need a this children, just a $this.val().   With this, my page was complete!:sparkles:
 Here is my page in action:![](assets/Mine5.png)
 I felt a bit more confident using jQuery this time around, so there was the teeny, tiniest bit of ease doing this assignment as compared to the last one.
+Here is my page deployment:
+https://ckhilpisch.github.io/DayPlanner_05/
